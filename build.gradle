@@ -4,24 +4,16 @@ apply plugin: 'application'
 group 'project.R'
 version '1.0'
 
-repositories {
-    mavenCentral()
-    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-}
-
-sourceSets {
-    main {
-        java {
-            srcDirs = ['src']
-        }
-    }
-}
-
 sourceCompatibility = 11
 targetCompatibility = 11
+mainClassName = "main.java.Entry"
 
 project.ext.lwjglVersion = "3.2.3"
 project.ext.lwjglNatives = "natives-windows"
+
+repositories {
+    mavenCentral()
+}
 
 dependencies {
     implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")

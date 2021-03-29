@@ -1,5 +1,10 @@
 .idea
+.project
+.classpath
+.settings
 
 .gradle
 **/build/
 !src/**/build/
+
+.vscode
